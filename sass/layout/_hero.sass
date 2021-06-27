@@ -1,0 +1,28 @@
+.hero
+  margin-bottom: 9.3rem
+  @media screen and (min-width: 768px)
+    margin-bottom: 11.5rem
+  & .container
+    display: flex
+    flex-direction: column
+    @media screen and (min-width: 768px)
+      flex-direction: row-reverse
+      align-items: center
+  &__img
+    margin: 0 auto 1.9rem
+    max-width: 52rem
+    @media screen and (min-width: 768px)
+      margin: 0
+      max-width: none
+      width: 50%
+  &__content
+    text-align: center
+    @media screen and (min-width: 768px)
+      text-align: left
+    & h1
+      margin-top: -1.6rem
+    & p
+      margin-bottom: 2.9rem
+      @media screen and (min-width: 768px)
+        margin-bottom: 3.8rem
+        max-width: 35rem

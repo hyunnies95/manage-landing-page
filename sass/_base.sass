@@ -1,0 +1,104 @@
+$col-accent: #F3603C
+$col-accent-hover: #F98F75
+$col-light: #FFF0EC
+$col-dark-blue: #242D52
+$col-very-dark: #1D1E25
+
+// Font family
+$font: 'Be Vietnam', sans-serif
+
+// Spacing
+$space-max-width: 111rem
+
+// Design elements
+$transition: 200ms ease-in-out
+
+// Typography
+*
+  font-family: $font
+body
+  color: $col-dark-blue
+  font-size: 1.6rem
+
+h1, h2, h3, p
+  margin: 0
+
+h1
+  font-size: 4rem
+  font-weight: 700
+  line-height: 5rem
+  letter-spacing: -1px
+  margin-bottom: 1rem
+  @media screen and (min-width: 768px)
+    font-size: 5.6rem
+    line-height: 6.4rem
+    margin-bottom: 3.5rem
+    
+h2
+  font-size: 3rem
+  font-weight: 800
+  line-height: 4.5rem
+  letter-spacing: -0.62px
+  @media screen and (min-width: 768px)
+    font-size: 4rem
+    font-weight: 700
+    line-height: 4.4rem
+    letter-spacing: -0.71px
+
+h3
+  font-size: 1.6rem
+  font-weight: 700
+  line-height: 2.3rem
+  letter-spacing: -0.29px
+  margin-bottom: 1.9rem
+
+p
+  font-size: 1.4rem
+  font-weight: 400rem
+  line-height: 2.8rem
+  opacity: 0.525
+  @media screen and (min-width: 768px)
+    font-size: 1.6rem
+    line-height: 2.6rem
+
+// Reset
+html
+  box-sizing: border-box
+  font-size: 62.5%
+  height: 100%
+
+*, *::before, *::after
+  box-sizing: border-box
+
+body
+  margin: 0
+  overflow-x: hidden
+  &.disable-scroll
+    overflow: hidden
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+a
+  color: inherit
+  text-decoration: none
+
+input, textarea
+  background: none
+  border: none
+  display: block
+  margin: 0
+  padding: 0
+
+textarea
+  resize: none
+
+label
+  display: block
+
+button
+  border: none
+  cursor: pointer
+  outline: none

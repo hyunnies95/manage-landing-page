@@ -1,0 +1,65 @@
+.features
+  margin-bottom: 6.2rem
+  @media screen and (min-width: 768px)
+    margin-bottom: 14.6rem
+  & .container
+    @media screen and (max-width: 767px)
+      padding-right: 0
+    @media screen and (min-width: 768px)
+      display: flex
+      justify-content: space-between
+  &__intro
+    text-align: center
+    margin-bottom: 5.4rem
+    padding-right: 2.5rem
+    @media screen and (min-width: 768px)
+      text-align: left
+      margin-bottom: 0
+      margin-right: 0.9rem
+      padding: 0
+    & h2
+      margin-bottom: 1.3rem
+      @media screen and (min-width: 768px)
+        margin-bottom: 3rem
+        max-width: 44.5rem
+    & p
+      @media screen and (min-width: 768px)
+        width: 35rem
+  &__list
+    @media screen and (min-width: 768px)
+      width: 48.5%
+
+.feature
+  display: flex
+  position: relative
+  &::before
+    content: ''
+    background-color: $col-light
+    border-radius: 3.9rem 0 0 3.9rem
+    position: absolute
+    height: 3.9rem
+    width: 100%
+    z-index: -1
+    @media screen and (min-width: 768px)
+      display: none
+  &:not(:last-of-type)
+    margin-bottom: 4.8rem
+    @media screen and (min-width: 768px)
+      margin-bottom: 4rem
+  &__number
+    background-color: $col-accent
+    border-radius: 3.9rem
+    color: #FFFFFF
+    font-weight: 700
+    margin-right: 2.7rem
+    padding: 0.6rem 2.3rem 1rem
+    height: 3.9rem
+  & h3
+    margin-top: 0.6rem
+    margin-bottom: 1.8rem
+    @media screen and (min-width: 768px)
+      margin-bottom: 1.9rem
+  & p
+    padding-right: 2.5rem
+    @media screen and (min-width: 768px)
+      padding-right: 0

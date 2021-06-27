@@ -1,0 +1,109 @@
+.header
+  padding: 4.5rem 0 4.8rem
+  @media screen and (min-width: 768px)
+    padding: 5.6rem 0 12rem
+  & .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    & .cta
+      display: none
+      @media screen and (min-width: 768px)
+        display: block
+
+  &__hamburger
+    cursor: pointer
+    width: 2.5rem
+    z-index: 10
+    @media screen and (min-width: 768px)
+      display: none
+    &:before,
+    &:after,
+    & div
+      background: $col-dark-blue
+      content: ''
+      display: block
+      height: 0.4rem
+      margin: 0.3rem 0
+      transition: 0.35s
+    &.open::before
+      transform: translateY(1rem) rotate(135deg)
+    &.open::after
+      transform: translateY(-0.4rem) rotate(-135deg)
+    &.open div
+      transform: scale(0)
+
+.logo
+  margin-top: 1.5rem
+
+.nav
+  &__links
+    @media screen and (max-width: 767px)
+      position: fixed
+      padding: 4rem 0
+      background-color: #FFFFFF
+      border-radius: 0.4rem
+      opacity: 0
+      text-align: center
+      margin: 0 auto
+      top: 10rem
+      left: 2rem
+      right: 2rem
+      z-index: 10
+    @media screen and (min-width: 768px)
+      background-color: transparent
+      display: flex
+      align-items: center
+      column-gap: 3.2rem
+      margin-left: -1.1rem
+      transform: none
+    &.open
+      opacity: 1
+  &__link
+    font-size: 1.3rem
+    font-weight: 700
+    transition: $transition opacity
+    &:not(:last-of-type)
+      margin-bottom: 2.4rem     
+      @media screen and (min-width: 768px)
+        margin-bottom: 0 
+    &:hover
+      opacity: 0.5
+    @media screen and (min-width: 768px)
+      font-weight: 500
+
+.overlay
+  background: linear-gradient(27deg,rgba(0, 0, 0, 0.7) 0%,rgba(0, 0, 0, 0) 100%)
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  opacity: 0
+  transition: opacity 400ms ease
+  height: 100vh
+  width: 100vw
+  z-index: 0
+  &.open
+    opacity: 1
+  @media screen and (min-width: 768px)
+    display: none
+    
+#toggle:checked ~ .hamburger
+  position: fixed
+  right: 2.4rem
+#toggle:checked ~ .hamburger .hamburger__icon
+  transform: rotate(45deg)
+#toggle:checked ~ .hamburger .hamburger__icon::before
+  transform: rotate(-90deg)
+  top: -0rem
+#toggle:checked ~ .hamburger .hamburger__icon::after
+  opacity: 0
+  transform: rotate(45deg)
+#toggle:checked ~ .overlay
+  opacity: 1
+  pointer-events: all
+  position: fixed
+  width: 100%
+  z-index: 3
+#toggle:checked ~ .nav .nav__links
+  opacity: 1
